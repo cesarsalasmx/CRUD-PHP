@@ -5,7 +5,7 @@
 
 		public static function conectar(){
 			$pdo_options[PDO::ATTR_ERRMODE]=PDO::ERRMODE_EXCEPTION;
-			self::$conexion= new PDO('mysql:host=localhost:8888;dbname=isc','root','root',$pdo_options);
+			self::$conexion= new PDO('mysql:host=localhost;dbname=isc','root','vertrigo',$pdo_options);
 			return self::$conexion;
 		}		
 	} 

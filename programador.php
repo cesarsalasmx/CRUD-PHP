@@ -4,7 +4,7 @@
 		private $nombre;
 		private $lenguajes;
 		private $pais;
-		private $salario
+		private $salario;
 
 		function __construct(){}
 

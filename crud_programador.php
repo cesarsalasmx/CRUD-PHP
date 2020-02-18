@@ -54,7 +54,7 @@ require_once('conexion.php');
 			$myProgramador= new Programador();
 			$myProgramador->setId($programador['id']);
 			$myProgramador->setNombre($programador['nombre']);
-			$myProgramador->setAutor($programador['lenguajes']);
+			$myProgramador->setLenguajes($programador['lenguajes']);
 			$myProgramador->setPais($programador['pais']);
 			$myProgramador->setSalario($programador['salario']);
 			return $myProgramador;
