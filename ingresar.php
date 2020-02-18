@@ -1,10 +1,12 @@
 <html>
 <head>
+	<link rel="stylesheet" type="text/css" href="stile.css">
 	<title> Ingresar Programador</title>
 </head>
 <header>
 Ingresa los datos del Programador
 </header>
+<div class="cuerpo">
 <form action='administrar_programador.php' method='post'>
 	<table>
 		<tr>
@@ -28,5 +30,9 @@ Ingresa los datos del Programador
 	<input type='submit' value='Guardar'>
 	<a href="index.php">Volver</a>
 </form>
+</div>
+<footer>
+			Administrar Programador 2020
+		</footer>
 
 </html>

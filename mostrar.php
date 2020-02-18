@@ -9,10 +9,17 @@ $listaProgramadores=$crud->mostrar();
 <html>
 <head>
 	<title>Mostrar programadores</title>
+	<link rel="stylesheet" type="text/css" href="stile.css">
 </head>
 <body>
+	<header>
+			Bienvenido Administrar Programador
+		</header>
+	<div class="cuerpo">
 	<table border=1>
-		<head>
+		
+		
+			<head>
 			<td>Nombre</td>
 			<td>Lenguajes</td>
 			<td>Pais</td>
@@ -20,7 +27,8 @@ $listaProgramadores=$crud->mostrar();
 			<td>Actualizar</td>
 			<td>Eliminar</td>
 		</head>
-		<body>
+		
+		
 			<?php foreach ($listaProgramadores as $programador) {?>
 			<tr>
 				<td><?php echo $programador->getNombre() ?></td>
@@ -31,8 +39,11 @@ $listaProgramadores=$crud->mostrar();
 				<td><a href="administrar_programador.php?id=<?php echo $programador->getId()?>&accion=e">Eliminar</a>   </td>
 			</tr>
 			<?php }?>
-		</body>
+		
 	</table>
-	<a href="index.php">Volver</a>
+	<a href="index.php">Volver</a></div>
+	<footer>
+			Administrar Programador 2020
+		</footer>
 </body>
 </html>

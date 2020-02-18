@@ -9,9 +9,14 @@
 ?>
 <html>
 <head>
+	<link rel="stylesheet" type="text/css" href="stile.css">
 	<title>Actualizar programador</title>
 </head>
 <body>
+	<header>
+			Bienvenido Administrar Programador
+		</header>
+	<div class="cuerpo">
 	<form action='administrar_programador.php' method='post'>
 	<table>
 		<tr>
@@ -36,5 +41,9 @@
 	<input type='submit' value='Guardar'>
 	<a href="index.php">Volver</a>
 </form>
+</div>
+<footer>
+			Administrar Programador 2020
+		</footer>
 </body>
 </html>
