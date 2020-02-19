@@ -60,6 +60,52 @@ require_once('conexion.php');
 			return $myProgramador;
 		}
 
+		public function obtenerIDLenguaje($id){
+			$db=Db::conectar();
+			$select=$db->prepare('SELECT * FROM lenguajes WHERE ID=:id');
+			$select->bindValue('id',$id);
+			$select->execute();
+			$lenguaje=$select->fetch();
+			$mylenguaje= new Programador();
+			$mylenguaje->setId($lenguaje['id']);
+			$mylenguaje->setNombre($lenguaje['nombre']);
+			return $mylenguaje;
+		}
+		public function obtenerLenguaje($nombre){
+			$db=Db::conectar();
+			$select=$db->prepare('SELECT * FROM lenguajes WHERE nombre=:nombre');
+			$select->bindValue('nombre',$nombre);
+			$select->execute();
+			$lenguaje=$select->fetch();
+			$mylenguaje= new Programador();
+			$mylenguaje->setId($lenguaje['id']);
+			$mylenguaje->setNombre($lenguaje['nombre']);
+			return $mylenguaje;
+		}
+
+		public function ObtenerIDPais($id){
+			$db=Db::conectar();
+			$select=$db->prepare('SELECT * FROM paises WHERE ID=:id');
+			$select->bindValue('id',$id);
+			$select->execute();
+			$lenguaje=$select->fetch();
+			$mypais= new Programador();
+			$mypais->setId($pais['id']);
+			$mypais->setNombre($pais['nombre']);
+			return $mypais;
+
+		}
+		public function obtenerPais($nombre){
+			$db=Db::conectar();
+			$select=$db->prepare('SELECT * FROM paises WHERE nombre=:nombre');
+			$select->bindValue('nombre',$nombre);
+			$select->execute();
+			$pais=$select->fetch();
+			$mypais= new Programador();
+			$mypais->setId($pais['id']);
+			$mypais->setNombre($pais['nombre']);
+			return $mypais;
+		}
 		// método para actualizar un libro, recibe como parámetro el libro
 		public function actualizar($programador){
 			$db=Db::conectar();
@@ -71,5 +117,6 @@ require_once('conexion.php');
 			$actualizar->bindValue('salario',$programador->getSalario());
 			$actualizar->execute();
 		}
+
 	}
 ?>

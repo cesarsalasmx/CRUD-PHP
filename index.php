@@ -2,13 +2,13 @@
 	<head>
 		<title>Administrar Programador</title>
 		<link rel="stylesheet" type="text/css" href="stile.css">
-	</head>	
+	</head>
 	<body>
 		<header>
 			Bienvenido Administrar Programador
 		</header>
 		<div class="cuerpo">
-			<table border=0>			
+			<table border=0>	
 				<tr>
 					<td><a href="ingresar.php">Ingresar</a></td>
 				</tr>
